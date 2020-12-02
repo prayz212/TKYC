@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9bd8a0-3739-4e63-9296-0b30e9c35af8" name="Default Changelist" comment="Commit finish">
-      <change beforePath="$PROJECT_DIR$/mvc/views/RegisterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/RegisterView.php" afterDir="false" />
+    <list default="true" id="ef9bd8a0-3739-4e63-9296-0b30e9c35af8" name="Default Changelist" comment="Commit database file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/LoginView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/LoginView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <recent name="$PROJECT_DIR$/mvc/views/pages" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -79,6 +80,7 @@
       <workItem from="1606831359152" duration="703000" />
       <workItem from="1606873174760" duration="8578000" />
       <workItem from="1606895565981" duration="14083000" />
+      <workItem from="1606925350794" duration="39000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Intro Page&#10;-----------------&#10;Commit Invoice, Request Stock In, Employer">
       <created>1606052776342</created>
@@ -136,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606924630997</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit database file">
+      <created>1606924859606</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606924859606</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +169,8 @@
     <MESSAGE value="Commit Order and Process Order" />
     <MESSAGE value="Commit Manage Employer" />
     <MESSAGE value="Commit finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit finish" />
+    <MESSAGE value="Commit database file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit database file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1606920635030">
@@ -180,10 +190,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1451" y="179" key="SettingsEditor/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606831866703" />
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606924635658">
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606924864694">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606924635658" />
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606924864694" />
     <state x="-1147" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606052983388">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
