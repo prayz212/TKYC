@@ -67,7 +67,57 @@ class Home extends Controller{
     }
 
     function StockManagement() {
-        echo "stock managment";
+        $id_user = $_SESSION["loggedIn"];
+        $permission_user = $_SESSION["permission"];
+
+        //Call model
+        $userModel = $this->model("UserModel");
+        $requestModel = $this->model("RequestModel");
+
+        
+        //Call model
+        $user = $userModel->getUserInfo($id_user, $permission_user);
+        $requests = $requestModel->getAllRequestStockIn();
+
+        //Call view
+        $this->view("MainView", [
+            "StockInView" => "true",
+            "RequestList" => $requests,
+            "userInfo" => $user
+        ]);
+
+    }
+
+    function NewStockInRequest() {
+        $id = $_POST["request_id"];
+
+        $stock = $_POST["stock"];
+        $note = $_POST["note"];
+        $now = date('d/m/Y');
+
+        $requestModel = $this->model("RequestModel");
+        $requests = $requestModel->insertRequest($id, $note, $now, $stock);
+
+        if ($requests) {
+            header("Location: ../Home/StockManagement");
+            exit();
+        }
+        else {
+            echo "Khong the nhap hang";
+        }
+    }
+
+    function StockOut($id) {
+        $requestModel = $this->model("RequestModel");
+        $requests = $requestModel->deleteRequest($id);
+
+        if ($requests) {
+            header("Location: ../StockManagement");
+            exit();
+        }
+        else {
+            echo "Khong the xuat hang";
+        }
     }
 
     function EmployerManagement() {

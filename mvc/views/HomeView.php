@@ -15,7 +15,7 @@ if (isset($_GET["url"])) {
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->

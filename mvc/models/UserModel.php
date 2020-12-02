@@ -60,7 +60,7 @@ class UserModel extends DB{
     }
 
     function getEmployerById($id) {
-        $sql = "SELECT `nhanvien`.`IdNv`, `nhanvien`.`IdAccount`, `nhanvien`.`FirstName`, `nhanvien`.`LastName`, `nhanvien`.`Phone`, `nhanvien`.`Address`, `nhanvien`.`DOB`, `nhanvien`.`Email`, `nhanvien`.`Senior`, `taikhoan`.`Permission` 
+        $sql = "SELECT `nhanvien`.`IdNv`, `nhanvien`.`IdAccount`, `nhanvien`.`FirstName`, `nhanvien`.`LastName`, `nhanvien`.`Phone`, `nhanvien`.`Address`, `nhanvien`.`DOB`, `nhanvien`.`Email`, `nhanvien`.`Senior`, `taikhoan`.`Permission`
                 FROM `nhanvien`, `taikhoan` WHERE `taikhoan`.`IdAccount` = `nhanvien`.`IdAccount` AND `nhanvien`.`IdNv` = ?";
 
         $stm = $this->con->prepare($sql);
@@ -79,8 +79,8 @@ class UserModel extends DB{
     }
 
     function updateEmployerById($id, $firstName, $lastName, $permission, $dob, $phone, $email, $address, $senior) {
-        $update = "UPDATE `nhanvien`, `taikhoan` SET `nhanvien`.`FirstName` = ?, `nhanvien`.`LastName` = ?, `taikhoan`.`Permission` = ?, 
-                    `nhanvien`.`DOB` = ?, `nhanvien`.`Phone` = ?, `nhanvien`.`Email` = ?, `nhanvien`.`Address` = ?, `nhanvien`.`Senior` = ? 
+        $update = "UPDATE `nhanvien`, `taikhoan` SET `nhanvien`.`FirstName` = ?, `nhanvien`.`LastName` = ?, `taikhoan`.`Permission` = ?,
+                    `nhanvien`.`DOB` = ?, `nhanvien`.`Phone` = ?, `nhanvien`.`Email` = ?, `nhanvien`.`Address` = ?, `nhanvien`.`Senior` = ?
                    WHERE `nhanvien`.`IdNv` = ? AND `nhanvien`.`IdAccount` = `taikhoan`.`IdAccount`";
         $stm = $this->con->prepare($update);
         $stm->bind_param('ssissssii',$firstName, $lastName, $permission, $dob, $phone, $email, $address, $senior, $id);
@@ -121,13 +121,40 @@ class UserModel extends DB{
 
         $idAccount = $stm->insert_id;
 
-        $sql = "INSERT INTO nhanvien (IdAccount, FirstName, LastName, Phone, Address, DOB, Email, Senior) 
+        $sql = "INSERT INTO nhanvien (IdAccount, FirstName, LastName, Phone, Address, DOB, Email, Senior)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stm = $this->con->prepare($sql);
         $stm->bind_param('isssssss', $idAccount, $firstName, $lastName, $phone, $address, $dob, $email, $senior);
         if (!$stm->execute()) {
             die($stm->error);
+            return false;
+        }
+
+        return true;
+    }
+
+    function RegisterUser($firstName, $lastName, $user, $email, $password, $address,
+                        $phone, $gender, $birthday) {
+
+        $sql1 = "INSERT INTO taikhoan(UserName, Password, Permission) VALUES (?, ?, ?)";
+
+        $per = 4;
+        $stm1 = $this->con->prepare($sql1);
+        $stm1->bind_param("ssi", $user, $password, $per);
+
+        if (!$stm1->execute()) {
+            return false;
+        }
+
+        $sql2 = "INSERT INTO khachhang(IdAccount, FirstName, LastName, Phone, DOB, Gender, Email, Address)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        $id =  $stm1->insert_id;
+        $stm1 = $this->con->prepare($sql2);
+        $stm1->bind_param("isssssss", $id, $firstName, $lastName, $phone, $birthday, $gender, $email, $address);
+
+        if (!$stm1->execute()) {
             return false;
         }
 

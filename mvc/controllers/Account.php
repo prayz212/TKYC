@@ -35,7 +35,24 @@ class Account extends Controller {
     }
 
     function Register() {
-        echo "register";
+        if (!isset($_POST["email"]) && !isset($_POST["pass"])) {
+            $this->view("RegisterView", []);
+            exit();
+        }
+            
+        $stm = $this->model("UserModel");
+        $tmp = $stm->registerUser($_POST["first"], $_POST["last"],
+                                $_POST["user"], $_POST["email"], 
+                                $_POST["pass"], $_POST["address"],
+                                $_POST["Phone"], $_POST["Gender"],
+                                $_POST["bday"]);
+
+        if ($tmp) {
+            header("Location: ../Account/Login");
+            exit();
+        }
+
+        $this->view("RegisterView", ["error" => "Đăng ký thất bại"]);
     }
 
     function Logout() {

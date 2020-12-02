@@ -18,7 +18,7 @@ if (isset($_GET["url"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Đăng nhập</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -41,8 +41,13 @@ if (isset($_GET["url"])) {
                     <label for="password">Password</label>
                     <input value="" name="password" id="password" type="password" class="form-control" placeholder="Password">
                 </div>
+                <div class="form-group custom-control custom-checkbox">
+                    <input name="remember" type="checkbox" class="custom-control-input" id="remember">
+                    <label class="custom-control-label" for="remember">Remember login</label>
+                </div>
+
                 <div class="form-group">
-                    <button class="w-100 btn btn-success px-5">Login</button>
+                    <button class="btn btn-success px-5">Login</button>
                 </div>
             </form>
         </div>
