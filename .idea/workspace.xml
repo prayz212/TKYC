@@ -20,57 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9bd8a0-3739-4e63-9296-0b30e9c35af8" name="Default Changelist" comment="Commit init">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CNPM.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/Bridge.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/controllers/Account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/controllers/Home.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/core/App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/core/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/core/DB.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/htaccess.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/models/OrderModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/models/UserModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/HomeView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/LoginView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/MainView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/detail_employer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/detail_invoice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/detail_stock_in.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/intro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/manage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/stock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/views/pages/stock_in.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._icon1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._icon2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._icon3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/._logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/icon-user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/icon1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/icon2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/icon3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/image6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/imgs/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/myscript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/core/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/models/OrderModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/models/OrderModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/HomeView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/MainView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/MainView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/pages/detail_invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/pages/detail_order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/pages/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/pages/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/myscript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +81,9 @@
       <workItem from="1606818209193" duration="1008000" />
       <workItem from="1606825894347" duration="954000" />
       <workItem from="1606827053693" duration="2952000" />
-      <workItem from="1606831359152" duration="639000" />
+      <workItem from="1606831359152" duration="703000" />
+      <workItem from="1606873174760" duration="8578000" />
+      <workItem from="1606895565981" duration="6725000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Intro Page&#10;-----------------&#10;Commit Invoice, Request Stock In, Employer">
       <created>1606052776342</created>
@@ -153,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606832009781</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit init">
+      <created>1606832089467</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606832089467</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,10 +157,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1451" y="179" key="SettingsEditor/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606831866703" />
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606832042210">
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606832092482">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606832042210" />
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606832092482" />
     <state x="-1147" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606052983388">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

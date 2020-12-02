@@ -8,9 +8,9 @@ class App{
     function __construct(){
 
 //        if (!isset($_SESSION['loggedIn'])) {
-//            require_once "./mvc/controllers/Account.php";
-//            $controller = new Account();
-//            call_user_func_array([$controller, "Login"], []);
+//            require_once "./mvc/controllers/Home.php";
+//            $controller = new Home();
+//            call_user_func_array([$controller, "Intro"], []);
 //            exit();
 //        }
  

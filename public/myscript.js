@@ -1,49 +1,49 @@
 $(document).ready(function(){
-    $(".delete_invoice").click(function () {
+    $(".delete_order").click(function () {
         let id = $(this).attr('id');
         console.log(id);
 
-        $('#deleteInvoice').modal('show');
+        $('#deleteOrder').modal('show');
 
         $('#sure').on('click', function () {
-            window.location.replace("../../Home/DeleteInvoice/" + id);
+            window.location.replace("../../Home/DeleteOrder/" + id);
         });
     });
+    //
+    // $(".delete_employer").click(function () {
+    //     let id = $(this).attr('id');
+    //
+    //     $('#deleteEmployer').modal('show');
+    //
+    //     $('#sure').on('click', function () {
+    //         window.location.replace("../../Home/DeleteEmployer/" + id);
+    //     });
+    // });
+    //
+    // $(".delete_request_stock_in").click(function () {
+    //     let id = $(this).attr('id');
+    //
+    //     $('#deleteRequest').modal('show');
+    //
+    //     $('#sure').on('click', function () {
+    //         window.location.replace("../../Home/DeleteRequest/" + id);
+    //     });
+    // });
 
-    $(".delete_employer").click(function () {
+    $('.table-row-order').click(function() {
         let id = $(this).attr('id');
-
-        $('#deleteEmployer').modal('show');
-
-        $('#sure').on('click', function () {
-            window.location.replace("../../Home/DeleteEmployer/" + id);
-        });
+        window.location.replace("../Home/DetailOrder/" + id)
     });
 
-    $(".delete_request_stock_in").click(function () {
-        let id = $(this).attr('id');
-
-        $('#deleteRequest').modal('show');
-
-        $('#sure').on('click', function () {
-            window.location.replace("../../Home/DeleteRequest/" + id);
-        });
-    });
-
-    $('.table-row-invoice').click(function() {
-        let id = $(this).attr('id');
-        window.location.replace("../Home/DetailInvoice/" + id)
-    });
-
-    $('.table-row-employer').click(function() {
-        let id = $(this).attr('id');
-        window.location.replace("../Home/DetailEmployer/" + id)
-    });
-
-    $('.table-row-stock-in').click(function() {
-        let id = $(this).attr('id');
-        window.location.replace("../Home/DetailStockInRequest/" + id)
-    });
+    // $('.table-row-employer').click(function() {
+    //     let id = $(this).attr('id');
+    //     window.location.replace("../Home/DetailEmployer/" + id)
+    // });
+    //
+    // $('.table-row-stock-in').click(function() {
+    //     let id = $(this).attr('id');
+    //     window.location.replace("../Home/DetailStockInRequest/" + id)
+    // });
 
 
 

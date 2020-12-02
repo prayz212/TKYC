@@ -64,7 +64,7 @@ if (isset($_GET["url"])) {
                     <?php
                     if ($_SESSION["permission"] == 4) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $root . "Home/NewOrder" ?>">Tạo đơn hàng</a>
+                        <a class="nav-link" href="<?= $root . "Home/Order" ?>">Tạo đơn hàng</a>
                     </li>
                     <?php
                     }

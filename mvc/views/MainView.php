@@ -8,7 +8,10 @@ switch ($action) {
     case "Intro":
         $active = "0";
         break;
-    case "NewOrder":
+    case "Order":
+        $active = "1";
+        break;
+    case "DetailOrder":
         $active = "1";
         break;
     case "ProcessOrder":
@@ -177,7 +180,7 @@ while ($level > 1) {
 
                 <div class="col-lg-9 col-md-12 pr-0 pl-md-0 pl-lg-2 h-75">
                     <?php isset($data["ListOrderView"]) and $data["ListOrderView"] === "true" ? require_once "./mvc/views/pages/order.php" : ""?>
-<!--                    --><?php //isset($data["DetailInvoiceView"]) and $data["DetailInvoiceView"] === "true" ? require_once "./mvc/views/pages/detail_invoice.php" : ""?>
+                    <?php isset($data["DetailOrderView"]) and $data["DetailOrderView"] === "true" ? require_once "./mvc/views/pages/detail_order.php" : ""?>
 <!--                    --><?php //isset($data["ManegementView"]) and $data["ManegementView"] === "true" ? require_once "./mvc/views/pages/manage.php" : ""?>
 <!--                    --><?php //isset($data["DetailEmployerView"]) and $data["DetailEmployerView"] === "true" ? require_once "./mvc/views/pages/detail_employer.php" : ""?>
 <!--                    --><?php //isset($data["StockInView"]) and $data["StockInView"] === "true" ? require_once "./mvc/views/pages/stock_in.php" : ""?>
