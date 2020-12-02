@@ -67,7 +67,6 @@
                         <div class="form-group">
                             <input value="" name="Gender" required class="form-control" type="text" placeholder="Giới tính" id="gender" onkeypress="clearError()">
                         </div>
-                        
                         <div class="form-group">
                             <input type="date" id="birthday" name="bday" min="1000-01-01"
                                    max="3000-12-31" class="form-control" onchange="clearError()">
