@@ -58,7 +58,7 @@ if (isset($data["ListOrder"]) and $data["ListOrder"] != false) {
                 $number++;
             }
         } else { ?>
-            <td colspan="5">Chua co don hàng</td>
+            <td colspan="5">Chưa có đơn hàng nào</td>
         <?php
         }
         ?>

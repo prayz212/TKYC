@@ -19,29 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9bd8a0-3739-4e63-9296-0b30e9c35af8" name="Default Changelist" comment="Commit Order and Process Order">
+    <list default="true" id="ef9bd8a0-3739-4e63-9296-0b30e9c35af8" name="Default Changelist" comment="Commit Manage Employer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controllers/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controllers/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controllers/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/HomeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/HomeView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/LoginView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/LoginView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/MainView.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/MainView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/pages/detail_employer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/pages/detail_employer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/pages/detail_stock_in.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/pages/manage.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/pages/manage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/pages/stock.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/views/pages/stock_in.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._icon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._icon2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._icon3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._image6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imgs/._logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/views/pages/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/views/pages/order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/myscript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +77,7 @@
       <workItem from="1606827053693" duration="2952000" />
       <workItem from="1606831359152" duration="703000" />
       <workItem from="1606873174760" duration="8578000" />
-      <workItem from="1606895565981" duration="13159000" />
+      <workItem from="1606895565981" duration="14083000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Intro Page&#10;-----------------&#10;Commit Invoice, Request Stock In, Employer">
       <created>1606052776342</created>
@@ -141,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606904277185</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit Manage Employer">
+      <created>1606916770051</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606916770051</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +150,8 @@
     <MESSAGE value="Commit Intro Page&#10;-----------------&#10;Commit Invoice, Request Stock In, Employer" />
     <MESSAGE value="Commit init" />
     <MESSAGE value="Commit Order and Process Order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Order and Process Order" />
+    <MESSAGE value="Commit Manage Employer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Manage Employer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1080" y="444" key="Github.ShareDialog" timestamp="1606831720303">
@@ -179,10 +167,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1451" y="179" key="SettingsEditor/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606831866703" />
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606904280059">
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606917135729">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606904280059" />
+    <state x="-1360" y="280" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606917135729" />
     <state x="-1147" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606052983388">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

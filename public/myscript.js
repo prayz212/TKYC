@@ -19,16 +19,6 @@ $(document).ready(function(){
             window.location.replace("../../Home/DeleteEmployer/" + id);
         });
     });
-    //
-    // $(".delete_request_stock_in").click(function () {
-    //     let id = $(this).attr('id');
-    //
-    //     $('#deleteRequest').modal('show');
-    //
-    //     $('#sure').on('click', function () {
-    //         window.location.replace("../../Home/DeleteRequest/" + id);
-    //     });
-    // });
 
     $('.table-row-order').click(function() {
         let id = $(this).attr('id');
@@ -39,11 +29,6 @@ $(document).ready(function(){
         let id = $(this).attr('id');
         window.location.replace("../Home/DetailEmployer/" + id)
     });
-    //
-    // $('.table-row-stock-in').click(function() {
-    //     let id = $(this).attr('id');
-    //     window.location.replace("../Home/DetailStockInRequest/" + id)
-    // });
 
 
 
