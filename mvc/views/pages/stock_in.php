@@ -98,13 +98,12 @@ if (isset($data["RequestList"]) and $data["RequestList"] != false) {
 
 
 <!-- Xuất đơn hàng -->
-<div class="modal fade" id="export" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="export" tabindex="-1" role="dialog" aria-labelledby="exportModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <h3 class="modal-title my-2" id="deleteModalLabel">Xác nhận xóa</h3>
-                <div>Bạn có chắc chắn muốn xóa nhân viên này?</div>
-                <div>Việc này sẽ xóa vĩnh viễn không thể khôi phục.</div>
+                <h3 class="modal-title my-2" id="exportModalLabel">Xác nhận xuất kho</h3>
+                <div>Bạn có chắc chắn muốn xuất hàng ra khỏi kho?</div>
             </div>
             <div class="modal-footer">
                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</a>

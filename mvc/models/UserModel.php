@@ -134,7 +134,7 @@ class UserModel extends DB{
         return true;
     }
 
-    function RegisterUser($firstName, $lastName, $user, $email, $password, $address,
+    function registerUser($firstName, $lastName, $user, $email, $password, $address,
                         $phone, $gender, $birthday) {
 
         $sql1 = "INSERT INTO taikhoan(UserName, Password, Permission) VALUES (?, ?, ?)";

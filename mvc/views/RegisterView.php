@@ -74,7 +74,7 @@
                         </div>
     
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success px-5 mt-3 mr-2">Đăng ký</button>
+                            <button type="submit" class="btn btn-success px-5 mt-3 mr-2 w-100">Đăng ký</button>
                         </div>
 
                         <div id="error_register"><?= $error ?></div>
