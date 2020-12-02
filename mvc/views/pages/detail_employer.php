@@ -5,13 +5,13 @@ $employer = $data["EmployerInfo"]->fetch_assoc();
 <div class="col-lg-12 shadow p-2 mb-3 bg-light rounded">
     <H5 class="text-center my-3">CHI TIẾT NHÂN VIÊN</H5>
 
-    <form class="p-2" method="post" action="<?= $root . "Home/UpdateEmployer/" . $employer["id"] ?>">
+    <form class="p-2" method="post" action="<?= $root . "Home/UpdateEmployer/" . $employer["IdNv"] ?>">
         <div class="form-group row">
             <div class="input-group mb-3 col-md-5">
                 <div class="input-group-append">
                     <span class="input-group-text">Mã nhân viên</span>
                 </div>
-                <input type="text" class="form-control" readonly value="<?= $employer["id"] ?>">
+                <input type="text" class="form-control" readonly value="<?= $employer["IdNv"] ?>">
             </div>
 
             <div class="input-group mb-3 col-md-7">
@@ -19,12 +19,12 @@ $employer = $data["EmployerInfo"]->fetch_assoc();
                     <span class="input-group-text">Chức vụ</span>
                 </div>
                 <?php
-                $perm = $employer["permission"];
+                $perm = $employer["Permission"];
                 ?>
                 <select class="form-control" name="permission">
-                    <option value="0" <?= $perm == 0 ? "selected" : ""?>>Quản lý</option>
-                    <option value="1" <?= $perm == 1 ? "selected" : ""?>>Nhân viên kho</option>
-                    <option value="2" <?= $perm == 2 ? "selected" : ""?>>Nhân viên bán hàng</option>
+                    <option value="1" <?= $perm == 1 ? "selected" : ""?>>Quản lý hệ thống</option>
+                    <option value="2" <?= $perm == 2 ? "selected" : ""?>>Nhân viên kho</option>
+                    <option value="3" <?= $perm == 3 ? "selected" : ""?>>Nhân viên xử lý đơn hàng</option>
                 </select>
             </div>
         </div>
@@ -34,7 +34,7 @@ $employer = $data["EmployerInfo"]->fetch_assoc();
                 <div class="input-group-append">
                     <span class="input-group-text">Họ và tên</span>
                 </div>
-                <input name="fullname" type="text" class="form-control" value="<?= $employer["lastName"] . " " . $employer["firstName"] ?>">
+                <input name="fullname" type="text" class="form-control" value="<?= $employer["LastName"] . " " . $employer["FirstName"] ?>">
             </div>
 
             <div class="input-group mb-3 col-md-4">
@@ -50,14 +50,14 @@ $employer = $data["EmployerInfo"]->fetch_assoc();
                 <div class="input-group-append">
                     <span class="input-group-text">Số điện thoại</span>
                 </div>
-                <input name="phone" type="text" class="form-control" value="<?= $employer["phoneNumber"] ?>">
+                <input name="phone" type="text" class="form-control" value="<?= $employer["Phone"] ?>">
             </div>
 
             <div class="input-group mb-3 col-md-7">
                 <div class="input-group-append">
                     <span class="input-group-text">Email</span>
                 </div>
-                <input name="email" type="text" class="form-control" value="<?= $employer["email"] ?>">
+                <input name="email" type="text" class="form-control" value="<?= $employer["Email"] ?>">
             </div>
         </div>
 
@@ -66,21 +66,21 @@ $employer = $data["EmployerInfo"]->fetch_assoc();
                 <div class="input-group-append">
                     <span class="input-group-text">Địa chỉ</span>
                 </div>
-                <input name="address" type="text" class="form-control" value="<?= $employer["address"] ?>">
+                <input name="address" type="text" class="form-control" value="<?= $employer["Address"] ?>">
             </div>
 
             <div class="input-group mb-3 col-md-4">
                 <div class="input-group-append">
                     <span class="input-group-text">Thâm niên</span>
                 </div>
-                <input name="senior" type="text" class="form-control" value="<?= $employer["senior"] ?>">
+                <input name="senior" type="text" class="form-control" value="<?= $employer["Senior"] ?>">
             </div>
         </div>
 
         <div class="d-flex flex-row-reverse">
             <button type="submit" class="btn btn-primary mx-3">Lưu thay đổi</button>
-            <button id="<?= $employer["id"] ?>" data-toggle="modal" type="button" class="delete_employer btn btn-danger ml-3">Xóa nhân viên</button>
-            <button type="button" class="btn btn-secondary" onclick="window.location='<?= $root . "Home/Management" ?>';">Hủy bỏ</button>
+            <button id="<?= $employer["IdNv"] ?>" data-toggle="modal" type="button" class="delete_employer btn btn-danger ml-3">Xóa nhân viên</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location='<?= $root . "Home/EmployerManagement" ?>';">Hủy bỏ</button>
         </div>
 
     </form>

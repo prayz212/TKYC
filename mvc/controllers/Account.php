@@ -28,7 +28,8 @@ class Account extends Controller {
                 header("Location: ../Home/Intro");
                 exit();
             } else {
-                echo "dang nhap that bai";
+                header("Location: ../Account/Login");
+                exit();
             }
         }
     }

@@ -70,8 +70,19 @@ class Home extends Controller{
         echo "stock managment";
     }
 
-    function AccountManagement() {
-        echo "account management";
+    function EmployerManagement() {
+        //Call model
+        $userModel = $this->model("UserModel");
+        $employers = $userModel->getAllEmployer();
+
+        $user = $this->getUserInfo();
+
+        //Call view
+        $this->view("MainView", [
+            "ManegementView" => "true",
+            "EmployerList" => $employers,
+            "userInfo" => $user
+        ]);
     }
 
 //    --------------------------------------------    ORDER   -------------------------------------------- //
@@ -179,9 +190,109 @@ class Home extends Controller{
         exit();
     }
 
-
-
-
     //    --------------------------------------------   END PROCESS ORDER   -------------------------------------------- //
+
+
+    //    --------------------------------------------    DETAIL EMPLOYER   -------------------------------------------- //
+    function DetailEmployer($id) {
+        //Call model
+        $userModel = $this->model("UserModel");
+        $employerInfo = $userModel->getEmployerById($id);
+
+        $user = $this->getUserInfo();
+
+        $this->view("MainView", [
+            "DetailEmployerView" => "true",
+            "EmployerInfo" => $employerInfo,
+            "userInfo" => $user
+        ]);
+    }
+
+    function UpdateEmployer($id) {
+        //SPLIT FULLNAME INTO FIRSTNAME AND LASTNAME
+        $fullname = $_POST["fullname"];
+        $name = explode(" ", $fullname);
+        $n = count($name);
+        $firstName = $name[$n - 1];
+        $lastName = "";
+        for ($i = 0; $i < $n - 1; $i++) {
+            $lastName .= $name[$i];
+
+            if (($i + 1) < ($n - 1)) {
+                $lastName .= " ";
+            }
+        }
+
+        $permission = $_POST["permission"];
+        $dob = $_POST["dob"];
+        $phone = $_POST["phone"];
+        $email = $_POST["email"];
+        $address = $_POST["address"];
+        $senior = $_POST["senior"];
+
+        //Call model
+        $userModel = $this->model("UserModel");
+
+        $update = $userModel->updateEmployerById($id, $firstName, $lastName, $permission, $dob, $phone, $email, $address, $senior);
+        if (!$update) {
+            die("update employer fail in UpdateEmployer function");
+        }
+
+        header("Location: ../../Home/EmployerManagement");
+        exit();
+    }
+
+    function DeleteEmployer($idEmployer) {
+        $userModel = $this->model("UserModel");
+        $user = $userModel->getEmployerById($idEmployer);
+
+        if ($user != false) {
+            $info = $user->fetch_assoc();
+            $idAccount = $info["IdAccount"];
+
+            $deleteResult = $userModel->deleteEmployerById($idEmployer, $idAccount);
+            if (!$deleteResult) {
+                die("delete employer fail in DeleteEmployer function");
+            }
+        }
+
+        header("Location: ../../Home/EmployerManagement");
+        exit();
+    }
+
+    function NewEmployer() {
+        //SPLIT FULLNAME INTO FIRSTNAME AND LASTNAME
+        $fullname = $_POST["fullname"];
+        $name = explode(" ", $fullname);
+        $n = count($name);
+        $firstName = $name[$n - 1];
+        $lastName = "";
+        for ($i = 0; $i < $n - 1; $i++) {
+            $lastName .= $name[$i];
+
+            if (($i + 1) < ($n - 1)) {
+                $lastName .= " ";
+            }
+        }
+
+        $permission = $_POST["permission"];
+        $dob = $_POST["dob"];
+        $phone = $_POST["phone"];
+        $email = $_POST["email"];
+        $address = $_POST["address"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $senior = 0;
+
+        $userModel = $this->model("UserModel");
+        $insertResult = $userModel->insertEmployer($firstName, $lastName, $permission, $dob, $phone, $email, $address, $senior, $username, $password);
+        if (!$insertResult) {
+            die("create employer fail in NewEmployer function");
+        }
+
+        header("Location: ../Home/EmployerManagement");
+        exit();
+    }
+    //    --------------------------------------------    END DETAIL EMPLOYER   -------------------------------------------- //
 }
 ?>

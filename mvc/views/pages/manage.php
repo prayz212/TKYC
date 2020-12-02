@@ -12,7 +12,7 @@ if (isset($data["EmployerList"]) and $data["EmployerList"] != false) {
     <div class="d-flex flex-row-reverse">
         <a role="button" aria-pressed="true" class="mb-3" data-toggle="modal" data-target="#newEmployer">
             <button class="btn btn-primary">
-                Tạo nhân viên
+                Thêm nhân viên
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                 </svg>
@@ -37,16 +37,16 @@ if (isset($data["EmployerList"]) and $data["EmployerList"] != false) {
         if ($isShow) {
             $number = 1;
             while ($row = $listEmployer->fetch_assoc()) {
-                $id = $row["id"];
+                $id = $row["IdNv"];
                 ?>
                 <tr id="<?= $id ?>" class="table-row-employer">
                     <th scope="row"><?= $number ?></th>
                     <td><?= $id ?></td>
-                    <td><?= $row["lastName"] . " " . $row["firstName"] ?></td>
+                    <td><?= $row["LastName"] . " " . $row["FirstName"] ?></td>
                     <td><?= $row["DOB"] ?></td>
-                    <td><?= $row["email"] ?></td>
-                    <td><?= $row["phoneNumber"] ?></td>
-                    <td><?= $row["senior"] ?></td>
+                    <td><?= $row["Email"] ?></td>
+                    <td><?= $row["Phone"] ?></td>
+                    <td><?= $row["Senior"] ?></td>
                 </tr>
                 <?php
                 $number++;
@@ -60,7 +60,7 @@ if (isset($data["EmployerList"]) and $data["EmployerList"] != false) {
     </table>
 </div>
 
-<!-- Tạo mới hoá đơn -->
+<!-- Tạo mới nhân viên -->
 <div class="modal fade" id="newEmployer" tabindex="-1" role="dialog" aria-labelledby="newEmployerLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -89,10 +89,10 @@ if (isset($data["EmployerList"]) and $data["EmployerList"] != false) {
                     </div>
                     <div class="form-group">
                         <select class="form-control" name="permission" class="w-100">
-                            <option value="" selected disabled hidden>Chọn chức vụ</option>
-                            <option value="0">Quản lý</option>
-                            <option value="1">Nhân viên kho</option>
-                            <option value="2">Nhân viên bán hàng</option>
+                            <option value="" selected disabled hidden>Chọn phòng ban</option>
+                            <option value="1">Quản lý hệ thống</option>
+                            <option value="2">Nhân viên kho</option>
+                            <option value="3">Nhân viên xử lý đơn hàng</option>
                         </select>
                     </div>
                     <div class="form-group row">

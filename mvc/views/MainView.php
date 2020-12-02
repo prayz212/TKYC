@@ -12,7 +12,11 @@ switch ($action) {
         $active = "1";
         break;
     case "DetailOrder":
-        $active = "1";
+        if ($_SESSION["permission"] == 3) {
+            $active = "2";
+        } else if ($_SESSION["permission"]) {
+            $active = "1";
+        }
         break;
     case "ProcessOrder":
         $active = "2";
@@ -20,7 +24,10 @@ switch ($action) {
     case "StockManagement":
         $active = "3";
         break;
-    case "AccountManagement":
+    case "DetailEmployer":
+        $active = "4";
+        break;
+    case "EmployerManagement":
         $active = "4";
         break;
 }
@@ -96,7 +103,7 @@ while ($level > 1) {
                             }
                             if ($_SESSION["permission"] == 1) { ?>
                                 <li class="nav-item <?= $active == 4 ? "active" : "" ?>">
-                                    <a class="nav-link" href="<?= $root . "Home/AccountManagement" ?>">Quản lý tài khoản</a>
+                                    <a class="nav-link" href="<?= $root . "Home/EmployerManagement" ?>">Quản lý nhân viên</a>
                                 </li>
                                 <?php
                             }
@@ -181,18 +188,9 @@ while ($level > 1) {
                 <div class="col-lg-9 col-md-12 pr-0 pl-md-0 pl-lg-2 h-75">
                     <?php isset($data["ListOrderView"]) and $data["ListOrderView"] === "true" ? require_once "./mvc/views/pages/order.php" : ""?>
                     <?php isset($data["DetailOrderView"]) and $data["DetailOrderView"] === "true" ? require_once "./mvc/views/pages/detail_order.php" : ""?>
-<!--                    --><?php //isset($data["ManegementView"]) and $data["ManegementView"] === "true" ? require_once "./mvc/views/pages/manage.php" : ""?>
-<!--                    --><?php //isset($data["DetailEmployerView"]) and $data["DetailEmployerView"] === "true" ? require_once "./mvc/views/pages/detail_employer.php" : ""?>
-<!--                    --><?php //isset($data["StockInView"]) and $data["StockInView"] === "true" ? require_once "./mvc/views/pages/stock_in.php" : ""?>
-<!--                    --><?php //isset($data["DetailStockInRequestView"]) and $data["DetailStockInRequestView"] === "true" ? require_once "./mvc/views/pages/detail_stock_in.php" : ""?>
-<!--                    --><?php //isset($data["StockOutView"]) and $data["StockOutView"] === "true" ? require_once "./mvc/views/pages/stock_out.php" : ""?>
-<!--                    --><?php //isset($data["DetailStockOutRequestView"]) and $data["DetailStockOutRequestView"] === "true" ? require_once "./mvc/views/pages/detail_stock_out.php" : ""?>
+                    <?php isset($data["ManegementView"]) and $data["ManegementView"] === "true" ? require_once "./mvc/views/pages/manage.php" : ""?>
+                    <?php isset($data["DetailEmployerView"]) and $data["DetailEmployerView"] === "true" ? require_once "./mvc/views/pages/detail_employer.php" : ""?>
                 </div>
-<!--                --><?php
-//                if ($active == 0) {
-//                    require_once "./mvc/views/pages/intro.php";
-//                }
-//                ?>
             </div>
         </div>
     </div>

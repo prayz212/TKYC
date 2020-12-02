@@ -82,7 +82,7 @@ if (isset($_GET["url"])) {
                     }
                     if ($_SESSION["permission"] == 1) { ?>
                     <li>
-                        <a class="nav-link" href="<?= $root . "Home/AccountManagement" ?>">Quản lý tài khoản</a>
+                        <a class="nav-link" href="<?= $root . "Home/EmployerManagement" ?>">Quản lý tài khoản</a>
                     </li>
                     <?php
                     }
