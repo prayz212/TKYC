@@ -40,29 +40,26 @@ $(document).ready(function() {
         });
     });
 
-    $('.table-row-invoice').click(function () {
-        $('.table-row-order').click(function () {
-            let id = $(this).attr('id');
-            window.location.replace("../Home/DetailOrder/" + id)
-        });
-
-        $('.table-row-employer').click(function () {
-            let id = $(this).attr('id');
-            window.location.replace("../Home/DetailEmployer/" + id)
-        });
-
-        $('.table-row-stock-in').click(function () {
-            let id = $(this).attr('id');
-            window.location.replace("../Home/DetailStockInRequest/" + id)
-        });
-
-
-        if ($(".change-permission-alert").length) {
-            setTimeout(function () {
-                $('.change-permission-alert').hide();
-            }, 5000);
-        }
+    $('.table-row-order').click(function () {
+        let id = $(this).attr('id');
+        window.location.replace("../Home/DetailOrder/" + id)
     });
+
+    $('.table-row-employer').click(function () {
+        let id = $(this).attr('id');
+        window.location.replace("../Home/DetailEmployer/" + id)
+    });
+
+    $('.table-row-stock-in').click(function () {
+        let id = $(this).attr('id');
+        window.location.replace("../Home/DetailStockInRequest/" + id)
+    });
+
+    if ($(".change-permission-alert").length) {
+        setTimeout(function () {
+            $('.change-permission-alert').hide();
+        }, 5000);
+    }
 })
 
 function clearError() {
